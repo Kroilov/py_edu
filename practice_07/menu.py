@@ -9,14 +9,14 @@ def print_main_menu():
 \t\033[1m2\033[0m Add contact\n\
 \t\033[1m5\033[0m Exit\n")
         select = input("Enter command: ")
-        if select == '0':
-            view_all_contacts()
-        if select == '1':
-            search_contact()
-        if select == '2':
-            add_contact()
-        if select == '5':
-            raise SystemExit
-        else:
-            print_main_menu()
-
+        if select.isdigit():
+            if select == '0':
+                view_all_contacts()
+            if select == '1':
+                search_contact()
+            if select == '2':
+                add_contact()
+            if select == '5':
+                raise SystemExit
+            else:
+                print_main_menu()
