@@ -79,7 +79,7 @@ def check_winner(board, message):
         init_board()
     
 
-bot = telebot.TeleBot(token="5815785408:AAENbxtAVAfofJ8VgOXbolqyqKbG_oYnSeg")
+bot = telebot.TeleBot(token="TOKEN")
 bot.message_handler(commands=['start'])(start_game)
 bot.message_handler(content_types=["text"])(play)
 bot.polling()
