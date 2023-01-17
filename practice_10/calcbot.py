@@ -18,7 +18,7 @@ def log(message, chat_id):
 
 
 def calc(arg_str):
-    return str(numexpr.evaluate(arg_str))b
+    return str(numexpr.evaluate(arg_str))
 
 
 def parse(text, chat_id):
@@ -35,7 +35,7 @@ def parse(text, chat_id):
     return result
 
 
-bot = telebot.TeleBot(token="TOKEN")
+bot = telebot.TeleBot(token="5815785408:AAENbxtAVAfofJ8VgOXbolqyqKbG_oYnSeg")
 bot.message_handler(commands=["start"])(start)
 bot.message_handler(content_types=["text"])(handle_text)
 bot.polling(none_stop=True, interval=0)
