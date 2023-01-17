@@ -4,7 +4,7 @@ import numexpr
 
 
 def start(message):
-    bot.send_message(message.chat.id, 'Я калькубот! Что нужно посчитать!')
+    bot.send_message(message.chat.id, 'Я калькубот! Что нужно посчитать?')
 
 
 def handle_text(message):
@@ -24,13 +24,13 @@ def calc(arg_str):
 def parse(text, chat_id):
     try:
         if text == "/help":
-            result = "В калькуляторе исопльзована библиотека numexpr"
+            result = "Пишите пример в чат без всяких комманд. \n*В калькуляторе использована библиотека numexpr"
             log(text, chat_id)
         else:
             result = calc(text)
             log(text, chat_id)
     except:
-        result = "Ошибка! Повторите ввод: "
+        result = "Ошибка! Повторите ввод."
         log("Error: \t" + text, chat_id)
     return result
 
