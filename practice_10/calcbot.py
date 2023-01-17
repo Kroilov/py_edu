@@ -35,7 +35,7 @@ def parse(text, chat_id):
     return result
 
 
-bot = telebot.TeleBot(token="5815785408:AAENbxtAVAfofJ8VgOXbolqyqKbG_oYnSeg")
+bot = telebot.TeleBot(token="TOKEN")
 bot.message_handler(commands=["start"])(start)
 bot.message_handler(content_types=["text"])(handle_text)
 bot.polling(none_stop=True, interval=0)
